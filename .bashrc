@@ -13,6 +13,15 @@ fi
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+#History maintenance
+HISTFILESIZE=10000
+HISTSIZE=5000
+PROMPT_COMMAND="history -a"
+HISTTIMEFORMAT='%F %T '
+export HISTSIZE HISTFILESIZE PROMPT_COMMAND HISTTIMEFORMAT
+shopt -s histappend
+
+
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
