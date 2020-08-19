@@ -13,6 +13,11 @@ fi
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
+# Color please
+alias ls='ls --color=auto'
+alias ll='ls -la --color=auto'
+alias l.='ls -d /* --color=auto'
+
 #History maintenance
 HISTFILESIZE=10000
 HISTSIZE=5000
