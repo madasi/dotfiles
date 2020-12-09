@@ -1,0 +1,17 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Madasi
+	email = madasi@gmail.com
+[credential]
+	helper = cache --timeout=3600
+[url "ssh://aur@aur.archlinux.org/"]
+	insteadOf = https://aur.archlinux.org/
+	insteadOf = http://aur.archlinux.org/
+	insteadOf = git://aur.archlinux.org/
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[pull]
+	rebase = false
+[core]
+	editor = vim
