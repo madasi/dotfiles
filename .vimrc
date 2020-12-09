@@ -117,7 +117,8 @@ set mouse=a
 set cmdheight=2
 
 " Display line numbers on the left
-set number
+" Commenting out in favor of automatic hybrid numbers I configure later
+"set number
 
 " Quickly time out on keycodes, but never time out on mappings
 set notimeout ttimeout ttimeoutlen=200
@@ -190,3 +191,13 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" Automatic toggling of hybrid line numbers
+" Taken from https://jeffkreeftmeijer.com/vim-number/
+:set number relativenumber
+
+:augroup numbertoggle
+:  autocmd!
+:  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+:  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+:augroup END
