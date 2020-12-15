@@ -44,6 +44,9 @@ alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 alias l.='ls -d .* --color=auto'
 
+# Dotfiles repo
+alias mydotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
