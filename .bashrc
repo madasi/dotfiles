@@ -18,6 +18,11 @@ alias ls='ls --color=auto'
 alias ll='ls -la --color=auto'
 alias l.='ls -d .* --color=auto'
 
+# Dotfiles repo
+# Based on https://www.atlassian.com/git/tutorials/dotfiles
+# which is based on https://news.ycombinator.com/item?id=11070797
+alias mydotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+
 #History maintenance
 HISTFILESIZE=10000
 HISTSIZE=5000
