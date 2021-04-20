@@ -49,6 +49,9 @@ alias l.='ls -d .* --color=auto'
 # which is based on https://news.ycombinator.com/item?id=11070797
 alias mydotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+# Drill short mode - https://github.com/NLnetLabs/ldns/issues/28#issuecomment-823032878
+alias drill-short='drill-short() { drill "$@" | grep -Ev "^;;|^$"; }; drill-short'
+
 # Virtualenvwrapper
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
