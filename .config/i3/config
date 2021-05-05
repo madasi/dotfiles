@@ -31,8 +31,11 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Disable screen blanking
-exec xset s off
-exec xset dpms 0 0 0
+exec --no-startup-id xset s off
+exec --no-startup-id xset dpms 0 0 0
+
+# Start compositor
+exec --no-startup-id picom -b
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
