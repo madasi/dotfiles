@@ -39,10 +39,10 @@ setopt share_history hist_find_no_dups
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
-# Color please
-alias ls='ls --color=auto'
-alias ll='ls -la --color=auto'
-alias l.='ls -d .* --color=auto'
+# Color please - now with lsd!
+alias ls='lsd --color=auto'
+alias ll='lsd -la --color=auto'
+alias l.='lsd -d .* --color=auto'
 
 # Dotfiles repo
 # Based on https://www.atlassian.com/git/tutorials/dotfiles
