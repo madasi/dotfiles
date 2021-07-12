@@ -31,9 +31,31 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-# Disable screen blanking
-exec --no-startup-id xset s off
-exec --no-startup-id xset dpms 0 0 0
+# # Disable screen blanking
+# exec --no-startup-id xset s off
+# exec --no-startup-id xset dpms 0 0 0
+# Current screen blanking config
+exec --no-startup-id xset dpms 3600 5400 7200
+
+# Power control options
+set $Locker ~/bin/i3lock-solarized-dark.sh
+set $Locker2 ~/bin/i3lock-colarized-dark-fork.sh
+
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id $Locker, mode "default"
+    bindsym e exec --no-startup-id i3-msg exit, mode "default"
+    bindsym s exec --no-startup-id $Locker2 && systemctl suspend, mode "default"
+    bindsym h exec --no-startup-id $Locker2 && systemctl hibernate, mode "default"
+    bindsym r exec --no-startup-id systemctl reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"  
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+
+bindsym $mod+Pause mode "$mode_system"
 
 # Start compositor
 exec --no-startup-id picom --experimental-backends -b
