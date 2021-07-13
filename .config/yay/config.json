@@ -1,7 +1,7 @@
 {
 	"aururl": "https://aur.archlinux.org",
 	"buildDir": "/home/madasi/builds/",
-	"absdir": "$HOME/.cache/yay/abs",
+	"absdir": "/home/madasi/.cache/yay/abs",
 	"editor": "",
 	"editorflags": "",
 	"makepkgbin": "makepkg",
@@ -29,7 +29,7 @@
 	"completionrefreshtime": 7,
 	"sudoloop": true,
 	"timeupdate": false,
-	"devel": false,
+	"devel": true,
 	"cleanAfter": false,
 	"provides": true,
 	"pgpfetch": true,
