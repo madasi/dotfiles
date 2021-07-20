@@ -97,6 +97,13 @@ plugins=(git zshmarks alias-tips zsh-syntax-highlighting zsh-autosuggestions col
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
+ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
+if [[ ! -d $ZSH_CACHE_DIR ]]; then
+  mkdir $ZSH_CACHE_DIR
+fi
+
+source $ZSH/oh-my-zsh.sh
+
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -107,13 +114,6 @@ plugins=(git zshmarks alias-tips zsh-syntax-highlighting zsh-autosuggestions col
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 source ~/.aliases
-
-ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
-if [[ ! -d $ZSH_CACHE_DIR ]]; then
-  mkdir $ZSH_CACHE_DIR
-fi
-
-source $ZSH/oh-my-zsh.sh
 
 ## Personal custom config
 # Virtualenvwrapper
