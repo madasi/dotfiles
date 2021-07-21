@@ -77,8 +77,32 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zshmarks alias-tips zsh-syntax-highlighting zsh-autosuggestions colored-man-pages virtualenvwrapper)
+plugins=(
+    alias-tips
+    ansible
+    archlinux
+    colored-man-pages
+    extract
+    git
+    gitignore
+    history
+    pip
+    python
+    screen
+    ssh-agent
+    urltools
+    virtualenvwrapper
+    web-search
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+    zshmarks
+)
 
+# Pre-sourcing plugin configuration
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+zstyle :omz:plugins:ssh-agent identities id_rsa ansible_key lists01_key
+
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -102,7 +126,6 @@ if [[ ! -d $ZSH_CACHE_DIR ]]; then
   mkdir $ZSH_CACHE_DIR
 fi
 
-source $ZSH/oh-my-zsh.sh
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -113,6 +136,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+alias zshconfig="vim ~/.zshrc"
 source ~/.aliases
 
 ## Personal custom config
@@ -120,6 +144,10 @@ source ~/.aliases
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/dev
 source /usr/bin/virtualenvwrapper_lazy.sh
+
+# pkgfile "command not found" handler
+# https://wiki.archlinux.org/title/Zsh#pkgfile_%22command_not_found%22_handler
+source /usr/share/doc/pkgfile/command-not-found.zsh
 
 # Customize alias-tips
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
