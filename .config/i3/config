@@ -61,6 +61,9 @@ bindsym $mod+Pause mode "$mode_system"
 # Start compositor
 exec --no-startup-id picom --experimental-backends -b
 
+# Startup notifications daemon
+exec --no-startup-id /usr/bin/dunst
+
 # Backgrounds please
 exec --no-startup-id variety
 

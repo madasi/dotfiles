@@ -109,6 +109,9 @@ set visualbell
 " is unset, this does nothing.
 "set t_vb=
 
+" Alacritty hangs when starting vim - https://wiki.archlinux.org/title/Alacritty#Mouse_not_working_properly_in_Vim
+set ttymouse=sgr
+
 " Enable use of the mouse for all modes
 set mouse=a
 
