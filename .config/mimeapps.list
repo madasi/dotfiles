@@ -17,4 +17,4 @@ application/atom+xml=atom.desktop;
 x-scheme-handler/http=exo-web-browser.desktop;
 x-scheme-handler/https=exo-web-browser.desktop;
 image/jpeg=ristretto.desktop;
-image/png=ristretto.desktop;
+image/png=gimp.desktop;ristretto.desktop;
