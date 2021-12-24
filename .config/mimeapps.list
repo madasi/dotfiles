@@ -5,10 +5,11 @@ x-scheme-handler/https=google-chrome-beta.desktop
 x-scheme-handler/about=google-chrome-beta.desktop
 x-scheme-handler/unknown=google-chrome-beta.desktop
 x-scheme-handler/webcal=google-chrome-beta.desktop
+x-scheme-handler/lbry=lbry.desktop
 
 [Added Associations]
 application/pdf=org.gnome.Evince.desktop;evince.desktop;
-text/plain=mousepad.desktop;
+text/plain=org.xfce.mousepad.desktop;mousepad.desktop;
 text/x-csrc=mousepad.desktop;
 application/x-desktop=mousepad.desktop;
 text/html=mousepad.desktop;google-chrome-beta.desktop;
@@ -17,4 +18,4 @@ application/atom+xml=atom.desktop;
 x-scheme-handler/http=exo-web-browser.desktop;
 x-scheme-handler/https=exo-web-browser.desktop;
 image/jpeg=ristretto.desktop;
-image/png=gimp.desktop;ristretto.desktop;
+image/png=org.xfce.ristretto.desktop;gimp.desktop;ristretto.desktop;
