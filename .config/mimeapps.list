@@ -17,5 +17,5 @@ application/json=mousepad.desktop;
 application/atom+xml=atom.desktop;
 x-scheme-handler/http=exo-web-browser.desktop;
 x-scheme-handler/https=exo-web-browser.desktop;
-image/jpeg=ristretto.desktop;
+image/jpeg=org.xfce.ristretto.desktop;ristretto.desktop;
 image/png=org.xfce.ristretto.desktop;gimp.desktop;ristretto.desktop;
