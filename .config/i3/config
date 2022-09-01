@@ -267,4 +267,9 @@ bar {
         strip_workspace_numbers yes
 }
 
-
+# Floating window config
+for_window [window_role="About"] floating enable
+for_window [class="vlc"] floating enable
+for_window [title="Authy"] floating enable
+# Temporary for testing goat/selenium usage
+for_window [class="firefox"] floating enable

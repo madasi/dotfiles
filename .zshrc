@@ -152,6 +152,10 @@ source /usr/share/doc/pkgfile/command-not-found.zsh
 # Customize alias-tips
 export ZSH_PLUGINS_ALIAS_TIPS_EXCLUDES="_"
 
+# wechall.net challenge scoring
+export WECHALLUSER="madasi"
+export WECHALLTOKEN="F1767-304E2-5C57E-873F1-A1A47-F9918"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
