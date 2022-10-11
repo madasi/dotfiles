@@ -1,0 +1,39 @@
+#turn off copyright notice
+startup_message off
+
+#this defaults to on, but I want to be sure
+autodetach on 
+
+#visual bell
+vbell on
+vbell_msg "  Wuff ---- Wuff!!  Window %n  "
+
+# define a bigger scrollback, default is 100 lines
+defscrollback 2048
+
+# Enable non-blocking mode to better cope with flaky ssh connections.
+defnonblock 5
+
+#Ryan's custom config below this line
+#--------------------------------------
+hardstatus on
+hardstatus alwayslastline
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
+#Replacing his status string with some modification I made - MDS
+#hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{.bY} %m/%d %D %c "
+#Colors not showing up correctly on a Mac, so attempting to correct.
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{.wk}%H %{.ck}%m/%d %D %c "
+
+
+bindkey -k k2 screen                                    # F2  | Create new window
+bindkey -k k3 prev                                      # F3  | Previous Window
+bindkey -k k4 next                                      # F4  | Next Window
+#Ryan had the detach at F6, but I keep hitting it by accident when I go for F7 so I moved it
+bindkey -k k9 detach                                    # F9  | Detach from this session
+bindkey -k k7 copy                                      # F7  | Enter copy/scrollback mode 
+
+# shell:  Default process started in screen's windows.
+# Makes it possible to use a different shell inside screen
+# than is set as the default login shell.
+# If begins with a '-' character, the shell will be started as a login shell.
+shell -$SHELL
