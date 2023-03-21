@@ -279,3 +279,4 @@ for_window [class="firefox"] floating enable
 
 # System Tray icons/programs
 exec_always --no-startup-id "~/.config/i3/scripts/tray.sh"
+exec_always --no-startup-id "dex -v /etc/xdg/autostart/lxpolkit.desktop" 
